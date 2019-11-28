@@ -1,0 +1,179 @@
+@charset "UTF-8";
+/*!
+ * All styles for site
+ */
+/*!
+ * Body content
+ */
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: table;
+  height: 0; }
+
+.clearfix:after {
+  clear: both; }
+
+.wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+.scale:hover {
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05); }
+
+.animate {
+  -o-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s; }
+  .animate:hover {
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s; }
+
+.visualizer-block {
+  margin-bottom: 5px;
+  overflow-x: auto; }
+  .visualizer-block .title {
+    margin-bottom: 5px; }
+
+.backsplash {
+  overflow: hidden;
+  min-height: 100%; }
+  .backsplash img {
+    width: 100%;
+    height: auto; }
+
+#double-door, #single-door {
+  position: absolute;
+  z-index: 2;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  mix-blend-mode: multiply; }
+
+#single-door {
+  display: none; }
+
+#door-handles, #single-door-handles {
+  position: absolute;
+  z-index: 3;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+  #door-handles .lock, #single-door-handles .lock {
+    fill: #000; }
+
+#single-door-handles {
+  display: none; }
+
+#handles {
+  left: 0;
+  top: 0; }
+
+#door-sidelight {
+  position: absolute;
+  z-index: 3;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%; }
+
+.double-door {
+  fill: #adadaa; }
+
+.handles {
+  fill: #c6c8c3; }
+
+[class*=sidelight] {
+  fill: transparent; }
+
+.door-sidelight {
+  display: none; }
+
+.door-01 {
+  display: block; }
+
+.jscolor {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  border: 0;
+  cursor: pointer;
+  font-size: 10px;
+  text-align: center; }
+
+#backsplash {
+  width: 100%;
+  height: 100%;
+  bottom: 4.2%;
+  mix-blend-mode: darken; }
+
+#sidelight {
+  width: 100%;
+  height: 100%;
+  bottom: 0; }
+
+.door, .handles {
+  width: 100%;
+  height: 100%;
+  top: 0; }
+
+.door-block {
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  background: #f1f1f1;
+  padding: 5px; }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    .door-block div {
+      height: 40px;
+      width: 40px; } }
+
+.inserts-door-11 {
+  display: none; }
+
+.door-type, .door-color, .handles-color, .backsplash-color, .door-sidelight, .door-inserts {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin-right: 5px;
+  border: 1px solid #999; }
+  .door-type:hover, .door-color:hover, .handles-color:hover, .backsplash-color:hover, .door-sidelight:hover, .door-inserts:hover {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s; }
+
+/* Костыль для Safari*/
+.row:before, .row:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0; }
+
+.row:after {
+  clear: both; }
+
+/*!
+ * Header content
+ */
+/*!
+ * Main content
+ */
+.main {
+  padding-top: 70px; }
+
+/*!
+ * Footer content
+ */
