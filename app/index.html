@@ -41,18 +41,58 @@
                             <div id="backsplash" class="position-absolute"></div>
                             <div class="door position-absolute">
                                 <svg id="double-door" data-name="double-door" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 375">
-                                    <rect class="double-door" id="double-door-rectangle" x="45.07" y="13.63" width="286.43" height="345.56"/>
+                                    <defs>
+                                        <style>.cls-1{fill:red;fill-rule:evenodd;}</style>
+                                        <pattern id="color-white" width="100%" height="100%">
+                                            <image xlink:href="images/door/big/white.jpg" x="0" y="0" width="100%" height="100%" />
+                                        </pattern>
+                                        <pattern id="color-anthrazit" width="100%" height="100%">
+                                            <image xlink:href="images/door/big/anthrazit.jpg" x="0" y="0" width="100%" height="100%" />
+                                        </pattern>
+                                        <pattern id="color-walnut" width="100%" height="100%">
+                                            <image xlink:href="images/door/big/walnut.jpg" x="0" y="0" width="100%" height="100%" />
+                                        </pattern>
+                                        <pattern id="color-goldenoak" width="100%" height="100%">
+                                            <image xlink:href="images/door/big/goldenoak.jpg" x="0" y="0" width="100%" height="100%" />
+                                        </pattern>
+                                        <pattern id="color-mahogany" width="100%" height="100%">
+                                            <image xlink:href="images/door/big/mahogany.jpg" x="0" y="0" width="100%" height="100%" />
+                                        </pattern>
+                                        <pattern id="color-darkoak" width="100%" height="100%">
+                                            <image xlink:href="images/door/big/darkoak.jpg" x="0" y="0" width="100%" height="100%" />
+                                        </pattern>
+                                    </defs>
+                                    <rect class="svg-door double-door" id="double-door-rectangle" x="45.07" y="13.63" width="286.43" height="345.56" fill="url(#color-anthrazit)"/>
                                 </svg>
                                 <svg id="single-door" data-name="single-door" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 375">
-                                    <rect class="double-door" id="single-door-rectangle" x="94.07" y="13.63" width="184.93" height="345.56"/>
+                                    <!--<defs>-->
+                                        <!--<style>.cls-1{fill:red;fill-rule:evenodd;}</style>-->
+                                        <!--<pattern id="color-white" width="100%" height="100%">-->
+                                            <!--<image xlink:href="images/door/big/white.jpg" x="0" y="0" width="100%" height="100%" />-->
+                                        <!--</pattern>-->
+                                        <!--<pattern id="color-anthrazit" width="100%" height="100%">-->
+                                            <!--<image xlink:href="images/door/big/anthrazit.jpg" x="0" y="0" width="100%" height="100%" />-->
+                                        <!--</pattern>-->
+                                        <!--<pattern id="color-walnut" width="100%" height="100%">-->
+                                            <!--<image xlink:href="images/door/big/walnut.jpg" x="0" y="0" width="100%" height="100%" />-->
+                                        <!--</pattern>-->
+                                        <!--<pattern id="color-goldenoak" width="100%" height="100%">-->
+                                            <!--<image xlink:href="images/door/big/goldenoak.jpg" x="0" y="0" width="100%" height="100%" />-->
+                                        <!--</pattern>-->
+                                        <!--<pattern id="color-mahogany" width="100%" height="100%">-->
+                                            <!--<image xlink:href="images/door/big/mahogany.jpg" x="0" y="0" width="100%" height="100%" />-->
+                                        <!--</pattern>-->
+                                        <!--<pattern id="color-darkoak" width="100%" height="100%">-->
+                                            <!--<image xlink:href="images/door/big/darkoak.jpg" x="0" y="0" width="100%" height="100%" />-->
+                                        <!--</pattern>-->
+                                    <!--</defs>-->
+                                    <rect class="svg-door double-door" id="single-door-rectangle" x="94.07" y="13.63" width="184.93" height="345.56" fill="url(#color-anthrazit)"/>
                                 </svg>
                                 <img src="images/door/door-01.png" class="img-fluid" id="door" alt="">
                             </div>
                             <div id="sidelight" class="position-absolute">
                                 <svg id="door-sidelight" data-name="door-sidelight" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 375">
-                                    <defs>
-                                        <style>.n{fill:#d24a43;}.clear{fill:transparent;}</style>
-                                    </defs>
+
                                     <rect class="sidelight sidelight-01 sidelight-22 sidelight-25 sidelight-43 sidelight-44 sidelight-45" x="74.66" y="42.43" width="56.84" height="62.11"/>
                                     <rect class="sidelight sidelight-01 sidelight-22 sidelight-24 sidelight-03 sidelight-43 sidelight-44" x="74.66" y="119.69" width="56.84" height="62.11"/>
                                     <rect class="sidelight sidelight-01 sidelight-22 sidelight-24 sidelight-25 sidelight-43 sidelight-44" x="74.66" y="195.95" width="56.84" height="62.11"/>
@@ -155,10 +195,12 @@
                         <div class="visualizer-block">
                             <h6 class="title text-uppercase">Doors color</h6>
                             <div class="visualizer-colors door-block">
-                                <div class="door-color" style="background-color: #adadaa" data-hex="#adadaa"></div>
-                                <div class="door-color" style="background-color: #961e28" data-hex="#961e28"></div>
-                                <div class="door-color" style="background-color: #fcfffc" data-hex="#fcfffc"></div>
-                                <div class="door-color" style="background-color: #303235" data-hex="#303235"></div>
+                                <div class="door-color" style="background: #54565c url(images/door/small/anthrazit.jpg)" data-hex="#54565c" data-url="anthrazit" title="Anthrazit" data-title="Anthrazit"></div>
+                                <div class="door-color" style="background: #82461f url(images/door/small/walnut.jpg)" data-hex="#82461f" data-url="walnut" title="Walnut" data-title="Walnut"></div>
+                                <div class="door-color" style="background: #9e5c17 url(images/door/small/goldenoak.jpg)" data-hex="#9e5c17" data-url="goldenoak" title="Golden Oak" data-title="Golden Oak"></div>
+                                <div class="door-color" style="background: #542116 url(images/door/small/mahogany.jpg)" data-hex="#542116" data-url="mahogany" title="Mahogany" data-title="Mahogany"></div>
+                                <div class="door-color" style="background: #382a24 url(images/door/small/darkoak.jpg)" data-hex="#382a24" data-url="darkoak" title="Dark Oak" data-title="Dark Oak"></div>
+                                <div class="door-color" style="background: #ffffff url(images/door/small/white.jpg)" data-hex="#ffffff" data-url="white" title="White" data-title="White"></div>
                             </div>
                         </div>
                         <div class="visualizer-block">

@@ -19,18 +19,11 @@
   padding: 0; }
 
 .scale:hover {
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
   transform: scale(1.05); }
 
 .animate {
-  -o-transition: .3s;
-  -moz-transition: .3s;
   transition: .3s; }
   .animate:hover {
-    -o-transition: .3s;
-    -moz-transition: .3s;
     transition: .3s; }
 
 .visualizer-block {
@@ -81,7 +74,7 @@
   background-position: 50%; }
 
 .double-door {
-  fill: #adadaa; }
+  fill: #54565c; }
 
 .handles {
   fill: #c6c8c3; }
@@ -124,8 +117,6 @@
   top: 0; }
 
 .door-block {
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
   width: 100%;
@@ -147,12 +138,7 @@
   margin-right: 5px;
   border: 1px solid #999; }
   .door-type:hover, .door-color:hover, .handles-color:hover, .backsplash-color:hover, .door-sidelight:hover, .door-inserts:hover {
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
     transform: scale(1.05);
-    -o-transition: .3s;
-    -moz-transition: .3s;
     transition: .3s; }
 
 /* Костыль для Safari*/
