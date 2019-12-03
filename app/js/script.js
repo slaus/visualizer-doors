@@ -8,6 +8,7 @@ const handles = document.getElementsByClassName("handles");
 const sidelight = document.getElementsByClassName("sidelight");
 const door = document.getElementsByClassName("door-sidelight");
 const svgDoor = document.getElementsByClassName("svg-door");
+const svgSingleDoor = document.getElementsByClassName("svg-single-door");
 
 // backsplash color
 var backsplashColor = document.getElementsByClassName("backsplash-color");
@@ -83,7 +84,10 @@ function changeDoorColor(e) {
     //document.getElementById("color").innerHTML = title;
 
     for (var dc = 0; dc < svgDoor.length; dc++) {
-        svgDoor[dc].style.fill = "url(#color-" + url +")";
+        svgDoor[dc].style.fill = "url(#door-color-" + url +")";
+    }
+    for (var sc = 0; sc < svgSingleDoor.length; sc++) {
+        svgSingleDoor[sc].style.fill = "url(#single-door-color-" + url +")";
     }
 }
 
