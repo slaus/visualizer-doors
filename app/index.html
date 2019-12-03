@@ -33,7 +33,7 @@
 <body>
     <div class="wrapper">
         <main class="main">
-            <div class="container visualizer">
+            <div class="container visualizer-door">
                 <div class="row">
                     <div class="col-12 col-sm-7 col-md-6 mb-3">
                         <div class="backsplash position-relative">
@@ -62,7 +62,7 @@
                                             <image xlink:href="images/door/big/darkoak.jpg" x="0" y="0" width="100%" height="100%" />
                                         </pattern>
                                     </defs>
-                                    <rect class="svg-door double-door" id="double-door-rectangle" x="45.07" y="13.63" width="286.43" height="345.56" fill="url(#door-color-anthrazit)"/>
+                                    <rect class="svg-door double-door" id="double-door-rectangle" x="45.07" y="13.63" width="286.43" height="345.56" fill="url(#door-color-walnut)"/>
                                 </svg>
                                 <svg id="single-door" data-name="single-door" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 375">
                                     <defs>
@@ -186,20 +186,20 @@
                             </div>
                         </div>
                         <div class="visualizer-block">
-                            <h6 class="title text-uppercase">Door</h6>
+                            <h6 class="title text-uppercase"><span id="door-type">Double</span> Door</h6>
                             <div class="visualizer-door door-block">
-                                <div class="door-type" style="background: url(images/door/small/door-11.jpg);" data-type="door-01"></div>
-                                <div class="door-type" style="background: url(images/door/small/door-01.jpg);" data-type="door-11"></div>
+                                <div class="door-type" style="background: url(images/door/small/door-11.jpg);" data-type="door-01" data-title="Double"></div>
+                                <div class="door-type" style="background: url(images/door/small/door-01.jpg);" data-type="door-11" data-title="Single"></div>
                             </div>
                         </div>
                         <div class="visualizer-block">
-                            <h6 class="title text-uppercase">Doors color</h6>
+                            <h6 class="title text-uppercase">Doors color <span id="door-color">Walnut</span></h6>
                             <div class="visualizer-colors door-block">
-                                <div class="door-color" style="background: #54565c url(images/door/small/anthrazit.jpg)" data-hex="#54565c" data-url="anthrazit" title="Anthrazit" data-title="Anthrazit"></div>
                                 <div class="door-color" style="background: #82461f url(images/door/small/walnut.jpg)" data-hex="#82461f" data-url="walnut" title="Walnut" data-title="Walnut"></div>
                                 <div class="door-color" style="background: #9e5c17 url(images/door/small/goldenoak.jpg)" data-hex="#9e5c17" data-url="goldenoak" title="Golden Oak" data-title="Golden Oak"></div>
                                 <div class="door-color" style="background: #542116 url(images/door/small/mahogany.jpg)" data-hex="#542116" data-url="mahogany" title="Mahogany" data-title="Mahogany"></div>
                                 <div class="door-color" style="background: #382a24 url(images/door/small/darkoak.jpg)" data-hex="#382a24" data-url="darkoak" title="Dark Oak" data-title="Dark Oak"></div>
+                                <div class="door-color" style="background: #54565c url(images/door/small/anthrazit.jpg)" data-hex="#54565c" data-url="anthrazit" title="Anthrazit" data-title="Anthrazit"></div>
                                 <div class="door-color" style="background: #ffffff url(images/door/small/white.jpg)" data-hex="#ffffff" data-url="white" title="White" data-title="White"></div>
                             </div>
                         </div>
@@ -262,12 +262,12 @@
                             </div>
                         </div>
                         <div class="visualizer-block">
-                            <h6 class="title text-uppercase">Hinges and handles</h6>
+                            <h6 class="title text-uppercase">Hinges and handles <span id="handles-color">Silver</span></h6>
                             <div class="visualizer-handles door-block">
-                                <div class="handles-color" style="background: #c6c8c3 url(images/handles/silver.jpg)" data-handles-hex="#c6c8c3"></div>
-                                <div class="handles-color" style="background: #ffffff url(images/handles/white.jpg)" data-handles-hex="#ffffff"></div>
-                                <div class="handles-color" style="background: #f1df57 url(images/handles/gold.jpg)" data-handles-hex="#f1df57"></div>
-                                <div class="handles-color" style="background: #373737 url(images/handles/black.jpg)" data-handles-hex="#373737"></div>
+                                <div class="handles-color" style="background: #c6c8c3 url(images/handles/silver.jpg)" data-handles-hex="#c6c8c3" title="Silver" data-title="Silver"></div>
+                                <div class="handles-color" style="background: #ffffff url(images/handles/white.jpg)" data-handles-hex="#ffffff" title="White" data-title="White"></div>
+                                <div class="handles-color" style="background: #f1df57 url(images/handles/gold.jpg)" data-handles-hex="#f1df57" title="Gold" data-title="Gold"></div>
+                                <div class="handles-color" style="background: #373737 url(images/handles/black.jpg)" data-handles-hex="#373737" title="Black" data-title="Black"></div>
                             </div>
                         </div>
                     </div>

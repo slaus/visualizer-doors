@@ -1,6 +1,6 @@
 "use strict";
 // Reference the color shape that was drawn over the image
-const path = "";
+const path = "images/";
 const backsplash = document.getElementById("backsplash");
 const doubleDoor = document.getElementById("double-door-rectangle");
 const singleDoor = document.getElementById("single-door-rectangle");
@@ -9,6 +9,9 @@ const sidelight = document.getElementsByClassName("sidelight");
 const door = document.getElementsByClassName("door-sidelight");
 const svgDoor = document.getElementsByClassName("svg-door");
 const svgSingleDoor = document.getElementsByClassName("svg-single-door");
+
+svgDoor[0].style.fill = "url(#door-color-walnut)";
+svgSingleDoor[0].style.fill = "url(#single-door-color-walnut)";
 
 // backsplash color
 var backsplashColor = document.getElementsByClassName("backsplash-color");
@@ -20,10 +23,10 @@ function changeBacksplashColor(e) {
     document.getElementById("backsplash-picker").value = "FFFFFF";
     backsplash.style.backgroundColor = "transparent";
     let bg = this.getAttribute("data-bg");
-    document.getElementById("backsplash-background").src = path + "images/wall/big/" + (bg == null ? "wall-03" : bg) + ".jpg";
+    document.getElementById("backsplash-background").src = path + "wall/big/" + (bg == null ? "wall-03" : bg) + ".jpg";
 }
 function changeBacksplashCustomColor(picker) {
-    document.getElementById("backsplash-background").src = path + "images/wall/big/wall-03.jpg";
+    document.getElementById("backsplash-background").src = path + "wall/big/wall-03.jpg";
     backsplash.style.backgroundColor = picker.toHEXString();
 }
 
@@ -33,8 +36,9 @@ for (var d = 0; d < doorType.length; d++) {
     doorType[d].onclick = changeDoor;
 }
 function changeDoor(e) {
+    let title = e.target.getAttribute("data-title");
+    document.getElementById("door-type").innerHTML = title;
     let type = this.getAttribute("data-type");
-
     let slight = this.getAttribute("data-sidelight");
     for (var di = 0; di < doorInserts.length; di++) {
 
@@ -53,18 +57,18 @@ function changeDoor(e) {
     for (var dt = 0; dt < inserts.length; dt++) {
         inserts[dt].style.display = "block";
     }
-    document.getElementById("door").src = path + "images/door/" + type + ".png";
+    document.getElementById("door").src = path + "door/" + type + ".png";
 
     if (type == "door-01") {
         document.getElementById("double-door").style.display = "block";
         document.getElementById("door-handles").style.display = "block";
-        document.getElementById("handles").src = path + "images/handles/handles-01.png";
+        document.getElementById("handles").src = path + "handles/handles-01.png";
         document.getElementById("single-door").style.display = "none";
         document.getElementById("single-door-handles").style.display = "none";
     } else if (type == "door-11") {
         document.getElementById("double-door").style.display = "none";
         document.getElementById("door-handles").style.display = "none";
-        document.getElementById("handles").src = path + "images/handles/handles-02.png";
+        document.getElementById("handles").src = path + "handles/handles-02.png";
         document.getElementById("single-door").style.display = "block";
         document.getElementById("single-door-handles").style.display = "block";
     }
@@ -81,7 +85,7 @@ function changeDoorColor(e) {
     singleDoor.style.fill = hex;
     let url = e.target.getAttribute("data-url");
     let title = e.target.getAttribute("data-title");
-    //document.getElementById("color").innerHTML = title;
+    document.getElementById("door-color").innerHTML = title;
 
     for (var dc = 0; dc < svgDoor.length; dc++) {
         svgDoor[dc].style.fill = "url(#door-color-" + url +")";
@@ -105,7 +109,7 @@ function changeDoorInserts(e) {
     }
     let inserts = this.getAttribute("data-inserts");
     let doorModel = document.getElementsByClassName(inserts);
-    document.getElementById("door").src = path + "images/door/" + inserts + ".png";
+    document.getElementById("door").src = path + "door/" + inserts + ".png";
     for (var i = 0; i < doorModel.length; i++) {
         doorModel[i].style.display = "block";
     }
@@ -138,6 +142,8 @@ function changeHandlesColor(e) {
     for (var h = 0; h < handles.length; h++) {
         handles[h].style.fill = handlesHex;
     }
+    let title = e.target.getAttribute("data-title");
+    document.getElementById("handles-color").innerHTML = title;
 }
 
 

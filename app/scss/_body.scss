@@ -36,89 +36,147 @@
   }
 }
 
-.visualizer-block {
-  margin-bottom: 5px;
-  overflow-x: auto;
+.visualizer-door {
 
-  & .title {
+  .visualizer-block {
     margin-bottom: 5px;
+    overflow-x: auto;
+
+    & .title {
+      margin-bottom: 5px;
+    }
   }
-}
 
-.backsplash {
-  overflow: hidden;
-  min-height: 100%;
+  .backsplash {
+    overflow: hidden;
+    min-height: 100%;
+    border: 3px solid #ccc;
 
-  & img {
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  #double-door, #single-door {
+    position: absolute;
+    z-index: 2;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    mix-blend-mode: multiply;
+  }
+
+  #single-door {
+    display: none;
+  }
+
+  #door-handles, #single-door-handles {
+    position: absolute;
+    z-index: 3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    //mix-blend-mode: multiply;
+
+    & .lock {
+      fill: #000;
+      //stroke: #000;
+    }
+  }
+
+  #single-door-handles {
+    display: none;
+  }
+
+  #handles {
+    left: 0;
+    top: 0;
+  }
+
+  #door-sidelight {
+    position: absolute;
+    z-index: 3;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    //mix-blend-mode: multiply;
+  }
+
+  .double-door {
+    fill: url(../images/door/big/walnut.jpg);
+  }
+
+  .handles {
+    fill: #c6c8c3;
+  }
+
+  [class*=sidelight] {
+    fill: transparent;
+  }
+
+  .door-sidelight {
+    display: none;
+  }
+
+  .door-01 {
+    display: block;
+  }
+
+  #backsplash {
     width: 100%;
-    height: auto;
+    height: 100%;
+    bottom: 4.2%;
+    mix-blend-mode: darken;
   }
-}
 
-#double-door, #single-door {
-  position: absolute;
-  z-index: 2;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  mix-blend-mode: multiply;
-}
-
-#single-door {
-  display: none;
-}
-
-#door-handles, #single-door-handles {
-  position: absolute;
-  z-index: 3;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  //mix-blend-mode: multiply;
-
-  & .lock {
-    fill: #000;
-    //stroke: #000;
+  #sidelight {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
   }
+
+  .door, .handles {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .door-block {
+    display: inline-flex;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    background: #f1f1f1;
+    padding: 5px;
+
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+      & div {
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+
+  .inserts-door-11 {
+    display: none;
+  }
+
+  .door-type, .door-color, .handles-color, .backsplash-color, .door-sidelight, .door-inserts {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    margin-right: 5px;
+    border: 1px solid #999;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: .3s;
+    }
+  }
+
 }
 
-#single-door-handles {
-  display: none;
-}
-
-#handles {
-  left: 0;
-  top: 0;
-}
-
-#door-sidelight {
-  position: absolute;
-  z-index: 3;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  //mix-blend-mode: multiply;
-}
-
-.double-door {
-  fill: #54565c;
-}
-
-.handles {
-  fill: #c6c8c3;
-}
-
-[class*=sidelight] {
-  fill: transparent;
-}
-
-.door-sidelight {
-  display: none;
-}
-
-.door-01 {
-  display: block;
-}
 
 .jscolor {
   position: absolute;
@@ -131,58 +189,6 @@
   cursor: pointer;
   font-size: 10px;
   text-align: center;
-}
-
-#backsplash {
-  width: 100%;
-  height: 100%;
-  bottom: 4.2%;
-  mix-blend-mode: darken;
-}
-
-#sidelight {
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-}
-
-.door, .handles {
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-
-.door-block {
-  display: inline-flex;
-  position: relative;
-  width: 100%;
-  z-index: 3;
-  background: #f1f1f1;
-  padding: 5px;
-
-  @media screen and (min-width: 576px) and (max-width: 767px) {
-    & div {
-      height: 40px;
-      width: 40px;
-    }
-  }
-}
-
-.inserts-door-11 {
-  display: none;
-}
-
-.door-type, .door-color, .handles-color, .backsplash-color, .door-sidelight, .door-inserts {
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  margin-right: 5px;
-  border: 1px solid #999;
-
-  &:hover {
-    transform: scale(1.05);
-    transition: .3s;
-  }
 }
 
 /* Костыль для Safari*/

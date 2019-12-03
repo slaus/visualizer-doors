@@ -19,27 +19,35 @@
   padding: 0; }
 
 .scale:hover {
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
   transform: scale(1.05); }
 
 .animate {
+  -o-transition: .3s;
+  -moz-transition: .3s;
   transition: .3s; }
   .animate:hover {
+    -o-transition: .3s;
+    -moz-transition: .3s;
     transition: .3s; }
 
-.visualizer-block {
+.visualizer-door .visualizer-block {
   margin-bottom: 5px;
   overflow-x: auto; }
-  .visualizer-block .title {
+  .visualizer-door .visualizer-block .title {
     margin-bottom: 5px; }
 
-.backsplash {
+.visualizer-door .backsplash {
   overflow: hidden;
-  min-height: 100%; }
-  .backsplash img {
+  min-height: 100%;
+  border: 3px solid #ccc; }
+  .visualizer-door .backsplash img {
     width: 100%;
     height: auto; }
 
-#double-door, #single-door {
+.visualizer-door #double-door, .visualizer-door #single-door {
   position: absolute;
   z-index: 2;
   background-size: 100%;
@@ -47,46 +55,94 @@
   background-position: 50%;
   mix-blend-mode: multiply; }
 
-#single-door {
+.visualizer-door #single-door {
   display: none; }
 
-#door-handles, #single-door-handles {
+.visualizer-door #door-handles, .visualizer-door #single-door-handles {
   position: absolute;
   z-index: 3;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 50%; }
-  #door-handles .lock, #single-door-handles .lock {
+  .visualizer-door #door-handles .lock, .visualizer-door #single-door-handles .lock {
     fill: #000; }
 
-#single-door-handles {
+.visualizer-door #single-door-handles {
   display: none; }
 
-#handles {
+.visualizer-door #handles {
   left: 0;
   top: 0; }
 
-#door-sidelight {
+.visualizer-door #door-sidelight {
   position: absolute;
   z-index: 3;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 50%; }
 
-.double-door {
-  fill: #54565c; }
+.visualizer-door .double-door {
+  fill: url(../images/door/big/walnut.jpg); }
 
-.handles {
+.visualizer-door .handles {
   fill: #c6c8c3; }
 
-[class*=sidelight] {
+.visualizer-door [class*=sidelight] {
   fill: transparent; }
 
-.door-sidelight {
+.visualizer-door .door-sidelight {
   display: none; }
 
-.door-01 {
+.visualizer-door .door-01 {
   display: block; }
+
+.visualizer-door #backsplash {
+  width: 100%;
+  height: 100%;
+  bottom: 4.2%;
+  mix-blend-mode: darken; }
+
+.visualizer-door #sidelight {
+  width: 100%;
+  height: 100%;
+  bottom: 0; }
+
+.visualizer-door .door, .visualizer-door .handles {
+  width: 100%;
+  height: 100%;
+  top: 0; }
+
+.visualizer-door .door-block {
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  background: #f1f1f1;
+  padding: 5px; }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    .visualizer-door .door-block div {
+      height: 40px;
+      width: 40px; } }
+
+.visualizer-door .inserts-door-11 {
+  display: none; }
+
+.visualizer-door .door-type, .visualizer-door .door-color, .visualizer-door .handles-color, .visualizer-door .backsplash-color, .visualizer-door .door-sidelight, .visualizer-door .door-inserts {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin-right: 5px;
+  border: 1px solid #999; }
+  .visualizer-door .door-type:hover, .visualizer-door .door-color:hover, .visualizer-door .handles-color:hover, .visualizer-door .backsplash-color:hover, .visualizer-door .door-sidelight:hover, .visualizer-door .door-inserts:hover {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s; }
 
 .jscolor {
   position: absolute;
@@ -99,47 +155,6 @@
   cursor: pointer;
   font-size: 10px;
   text-align: center; }
-
-#backsplash {
-  width: 100%;
-  height: 100%;
-  bottom: 4.2%;
-  mix-blend-mode: darken; }
-
-#sidelight {
-  width: 100%;
-  height: 100%;
-  bottom: 0; }
-
-.door, .handles {
-  width: 100%;
-  height: 100%;
-  top: 0; }
-
-.door-block {
-  display: inline-flex;
-  position: relative;
-  width: 100%;
-  z-index: 3;
-  background: #f1f1f1;
-  padding: 5px; }
-  @media screen and (min-width: 576px) and (max-width: 767px) {
-    .door-block div {
-      height: 40px;
-      width: 40px; } }
-
-.inserts-door-11 {
-  display: none; }
-
-.door-type, .door-color, .handles-color, .backsplash-color, .door-sidelight, .door-inserts {
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  margin-right: 5px;
-  border: 1px solid #999; }
-  .door-type:hover, .door-color:hover, .handles-color:hover, .backsplash-color:hover, .door-sidelight:hover, .door-inserts:hover {
-    transform: scale(1.05);
-    transition: .3s; }
 
 /* Костыль для Safari*/
 .row:before, .row:after {
